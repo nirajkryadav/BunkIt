@@ -1,19 +1,16 @@
-
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
-  Platform,
   StyleSheet,
-  Text,
   View
 } from 'react-native';
-import {FbButton} from './components/FbButton'
-export default class App extends Component<Props> {
+
+import LogIn from './components/LogIn';
+
+export default class App extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        
-        <FbButton> Login </FbButton>
-        
+        <LogIn />
       </View>
     );
   }
@@ -21,10 +18,8 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
-    padding: 20,
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
   },
 });
