@@ -1,12 +1,16 @@
-import React from 'react';
-import { Text, StyleSheet, TouchableOpacity} from 'react-native';
+import React from 'react'
+import { Button } from 'react-native'
 
-const FbButton = () => {
+const FbButton = (props) => {
 	return (
-		<TouchableOpacity>
-			<Text> Login</Text>
-		</TouchableOpacity>
+		<Button
+  onPress={'Press'}
+  title="Learn More"
+  color="#0D0D0D"
+  accessibilityLabel="Learn more about this purple button"/>
 		)
 }
 
-export {FbButton};
+
+
+export {FbButton}
