@@ -13,7 +13,7 @@ function ButtonsRow({ children }) {
   )
 }
 
-export class About extends Component {
+export default class About extends Component {
   FbLogin(){
     Alert.alert("Fblogin")  
   }
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#0D0D0D',
     alignItems: 'center',
-    paddingTop: 500,
+    paddingTop: 400,
     paddingHorizontal: 20,
   },
   buttonsRow: {
