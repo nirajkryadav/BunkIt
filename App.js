@@ -1,39 +1,22 @@
+import {TabNavigator} from "react-navigation";
 
-import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
-import {FbButton} from './app/components/FbButton'
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        
-        <FbButton/>
-        
-      </View>
-    );
+//import your tabs js file
+import Login from "./app/screens/Login";
+import YourInfo from "./app/screens/YourInfo";
+import TimeTable from "./app/screens/TimeTable";
+
+var myTabs = TabNavigator({
+  // here you will define your screen-tabs
+  Home: {screen:Login},
+  Shopping: {screen:YourInfo},
+  Cart: {screen:TimeTable}
+},
+{
+  tabBarPosition: 'bottom',
+  animationEnabled: true,
+  tabBarOptions: {
+    activeTintColor: 'red',
   }
-}
+  });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+export default myTabs;f

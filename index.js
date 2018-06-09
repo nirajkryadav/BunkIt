@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import Login from './app/screens/Login';
+import TimeTable from './app/screens/TimeTable';
 
-AppRegistry.registerComponent('BunkIt', () => Login);
+AppRegistry.registerComponent('BunkIt', () => TimeTable);

@@ -1,11 +1,19 @@
-
 import React, { Component } from 'react'
 import {
   StyleSheet,
   View,
-  Alert
+  Alert,
+  Text
 } from 'react-native'
-import {RoundButton} from './components/RoundButton'
+import { 
+  Container, 
+  Content, 
+  Form, 
+  Item, 
+  Input 
+} from 'native-base';
+
+import {RoundButton} from '../components/RoundButton'
 
 function ButtonsRow({ children }) {
   return (
@@ -24,17 +32,18 @@ export default class About extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Text style={{color:'red'}}>or continue with</Text>
         <ButtonsRow>
           <RoundButton
             title='F'
             color='#3B5998'
-            background='#FFFFFF'
+            background='#FFF'
             onPress={ this.FbLogin.bind(this) }
           />
           <RoundButton
             title='G'
             color='#3B5998'
-            background='#FFFFFF'
+            background='#FFF'
             onPress={ this.GLogin.bind(this) }
           />
         </ButtonsRow>
@@ -46,7 +55,7 @@ export default class About extends Component {
 const styles = StyleSheet.create({
  container: {
     flex: 1,
-    backgroundColor: '#0D0D0D',
+    backgroundColor: '#FFFFFF',
     alignItems: 'center',
     paddingTop: 400,
     paddingHorizontal: 20,
@@ -57,5 +66,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: 80,
     marginBottom: 30,
+    paddingLeft: 80,
+    paddingRight: 80,
   },
 })
