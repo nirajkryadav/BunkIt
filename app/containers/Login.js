@@ -5,13 +5,6 @@ import {
   Alert,
   Text
 } from 'react-native'
-import { 
-  Container, 
-  Content, 
-  Form, 
-  Item, 
-  Input 
-} from 'native-base';
 
 import {RoundButton} from '../components/RoundButton'
 

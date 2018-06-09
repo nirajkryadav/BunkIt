@@ -101,8 +101,8 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: '#F5FCFF',
-      paddingTop: 400,
-      paddingBottom:500,
+      paddingTop: 0,
+      paddingBottom:0,
   },
    cell: {
       width:40, 
@@ -116,18 +116,14 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       alignSelf: 'stretch',
       justifyContent: 'space-between',
-      marginTop: 80,
-      marginBottom: 30,
+      marginTop: 10,
       paddingLeft: 25,
       paddingRight: 25,
   },
    viewCol: {
       flexDirection: 'column',
       alignSelf: 'stretch',
-      marginTop: 0,
-      marginBottom: 0,
-      paddingTop: 0,
-      paddingBottom: 0,
+      justifyContent: 'space-between',
    },
 
 });
