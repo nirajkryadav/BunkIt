@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "789334960328",
+    "firebase_url": "https://time-table-app-c58e2.firebaseio.com",
+    "project_id": "time-table-app-c58e2",
+    "storage_bucket": "time-table-app-c58e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789334960328:android:10896b1c12dceac2",
+        "android_client_info": {
+          "package_name": "com.bunkit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789334960328-1db9ravgnhj5igajr7q09ksicb58qftg.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "789334960328-4a25r25uitb9vmbo4blin24ua5cfttod.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bunkit",
+            "certificate_hash": "7bfd77ebf29bfbcbb68a64c6573b3faa7bdfd9d9"
+          }
+        },
+        {
+          "client_id": "789334960328-72ecd4gggcsi61vt76ge4aaba7qis8rq.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "789334960328-72ecd4gggcsi61vt76ge4aaba7qis8rq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWgpj1yNL-7WK9Y2815on6rHNfa4pe10U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789334960328-1db9ravgnhj5igajr7q09ksicb58qftg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

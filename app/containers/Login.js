@@ -8,6 +8,7 @@ import {
 
 import {RoundButton} from '../components/RoundButton'
 import {LoginManager} from 'react-native-fbsdk' 
+import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin'
 
 function ButtonsRow({ children }) {
   return (
