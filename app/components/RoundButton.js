@@ -6,7 +6,7 @@ import {
   function RoundButton({ title, color, background, onPress, disabled }) {
   return (
     <TouchableOpacity
-      onPress={() => !disabled && onPress()}
+      onPress= {onPress}
       style={[ styles.button, { backgroundColor: background }]}
       activeOpacity={disabled ? 1.0 : 0.7}>
 

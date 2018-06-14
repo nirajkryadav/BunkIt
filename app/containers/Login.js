@@ -7,6 +7,7 @@ import {
 } from 'react-native'
 
 import {RoundButton} from '../components/RoundButton'
+import {LoginManager} from 'react-native-fbsdk' 
 
 function ButtonsRow({ children }) {
   return (
@@ -15,9 +16,17 @@ function ButtonsRow({ children }) {
 }
 
 export default class About extends Component {
-  FbLogin(){
-    Alert.alert("Fblogin")  
-  }
+  _fbAuth(){
+    LoginManager.logInWithReadPermissions(['public_profile']).then(function(result){
+      if (result.isCancelled) {
+        console.log('Login was cancelled')
+      } else {
+        console.log('Login was a sucess' + result.grantedPermissions.tostring())
+      }
+    }, function(error){
+        console.log('An error occured: ' + error)
+      })
+    }
 
   GLogin(){
     Alert.alert("Google Login")
@@ -31,7 +40,7 @@ export default class About extends Component {
             title='F'
             color='#3B5998'
             background='#FFF'
-            onPress={ this.FbLogin.bind(this) }
+            onPress={ this._fbAuth.bind(this) }
           />
           <RoundButton
             title='G'
