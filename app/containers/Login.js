@@ -27,11 +27,29 @@ export default class About extends Component {
     }, function(error){
         console.log('An error occured: ' + error)
       })
-    }
-
-  GLogin(){
-    Alert.alert("Google Login")
   }
+
+  
+  _GAuth(){
+    GoogleSignin.signIn()
+    .then((user) => {
+      console.log(user);
+      this.setState({user: user});
+    })
+    .catch((err) => {
+      console.log('WRONG SIGNIN', err);
+    })
+    .done();
+  }
+  _signOut() {
+    GoogleSignin.revokeAccess()
+      .then(() => GoogleSignin.signOut())
+      .then(() => {
+        this.setState({ user: null })
+      })
+      .done()
+  }
+  
   render() {
     return (
       <View style={styles.container}>
@@ -47,7 +65,7 @@ export default class About extends Component {
             title='G'
             color='#3B5998'
             background='#FFF'
-            onPress={ this.GLogin.bind(this) }
+            onPress={ this._GAuth.bind(this) }
           />
         </ButtonsRow>
       </View>
