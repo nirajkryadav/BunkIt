@@ -2,18 +2,110 @@ import React, { Component } from 'react'
 import {
   StyleSheet,
   View,
-  Alert,
-  Text
+  Text,
+  TextInput,
+  TouchableOpacity,
 } from 'react-native'
+import { 
+  Container, 
+  Content, 
+  Button, 
+  Icon, 
+  Right, 
+  Body, 
+  Left, 
+  Picker, 
+  Form } from "native-base";
 
-export default class About extends Component {
+
+export default class test extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selected2: undefined,
+      selected3: undefined,
+      selected4: undefined,
+    }
+  }
+  onValueChange2(value: string) {
+    this.setState({
+      selected2: value
+    });
+  }
+  onValueChange3(value: string) {
+    this.setState({
+      selected3: value
+    });
+  }
+  onValueChange4(value: string) {
+    this.setState({
+      selected4: value
+    });
+  }
   render() {
     return (
       <View style={styles.container}>
-        <View style= {styles.Card}>
-          <Text style= {styles.Text}>Total Classes You Can Bunk
-          </Text>
-        </View> 
+        <Text style={styles.textInfo}>Your Info</Text>
+        <TextInput style={styles.textinputName}placeholder='Yout Name'/>
+        
+          <Form>
+            <Picker
+              mode="dropdown"
+              iosIcon={<Icon name="ios-arrow-down-outline" />}
+              placeholder="College Name"
+              placeholderStyle={{ color: "#bfc6ea" }}
+              placeholderIconColor="909090"
+              style={{  }}
+              selectedValue={this.state.selected2}
+              onValueChange={this.onValueChange2.bind(this)}
+            >
+              <Picker.Item label="CIC" value="key0" />
+              <Picker.Item label="KMC" value="key1" />
+              <Picker.Item label="Ramjas" value="key2" />
+              <Picker.Item label="SRCC" value="key3" />
+              <Picker.Item label="Hindu" value="key4" />
+            </Picker>
+            <Picker
+              mode="dropdown"
+              iosIcon={<Icon name="ios-arrow-down-outline" />}
+              placeholder="College Name"
+              placeholderStyle={{ color: "#bfc6ea" }}
+              placeholderIconColor="909090"
+              style={{  }}
+              selectedValue={this.state.selected3}
+              onValueChange={this.onValueChange3.bind(this)}
+            >
+              <Picker.Item label="Btech" value="key0" />
+              <Picker.Item label="BA" value="key1" />
+              <Picker.Item label="MSC" value="key2" />
+              <Picker.Item label="BSC" value="key3" />
+              <Picker.Item label="MCom" value="key4" />
+            </Picker>
+            <Picker
+              mode="dropdown"
+              iosIcon={<Icon name="ios-arrow-down-outline" />}
+              placeholder="College Name"
+              placeholderStyle={{ color: "#bfc6ea" }}
+              placeholderIconColor="909090"
+              style={{  }}
+              selectedValue={this.state.selected4}
+              onValueChange={this.onValueChange4.bind(this)}
+            >
+              <Picker.Item label="I" value="key0" />
+              <Picker.Item label="II" value="key1" />
+              <Picker.Item label="III" value="key2" />
+              <Picker.Item label="IV" value="key3" />
+            </Picker>
+          </Form>
+      
+        <View style={styles.buttonright}>
+          <TouchableOpacity
+            style={ styles.button}>
+            <View style={styles.buttonBorder}>
+              <Text style={{color:'#ffffff'}}>Submit</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
       </View>
     )
   }
@@ -22,26 +114,39 @@ export default class About extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
-    alignItems: 'center',
-    paddingTop: 200,
+    backgroundColor: '#ffffff',
+    paddingTop: 50,
     paddingHorizontal: 20,
   },
-  Card: {
-    width:350, 
-    height: 350,
-    borderRadius: 10,
-    borderColor: '#d6d7da',
-    borderWidth: 1,
- },
-  Text:{
-    fontSize: 30,
-    fontWeight:"normal",
-    paddingTop: 30,
-    paddingLeft: 20,
-    paddingRight: 20,
-    textAlign: 'center',
+  textInfo: {
+    color: '#7BC46E',  
+    fontSize: 40,
+    textAlign: 'right',
+    paddingRight: 20 ,
+    paddingBottom: 150
   },
-
-
+  textinputName:{
+    height: 50,
+    fontSize: 16 
+  },
+  button: {
+    width: 140,
+    height: 140,
+    borderRadius: 70,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonBorder: {
+    width: 136,
+    height: 136,
+    borderRadius: 68,
+    borderWidth: 1,
+    borderColor: '#909090',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor:'#7BC46E'
+  },
+  buttonright:{
+    paddingLeft: 220
+  }
 })

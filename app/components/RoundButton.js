@@ -3,15 +3,14 @@ import {
   StyleSheet, Text, View, TouchableOpacity
   } from 'react-native'
 
-  function RoundButton({ title, color, background, onPress, disabled }) {
+  function RoundButton({ url, color, background, onPress, disabled }) {
   return (
     <TouchableOpacity
       onPress= {onPress}
       style={[ styles.button, { backgroundColor: background }]}
-      activeOpacity={disabled ? 1.0 : 0.7}>
-
       <View style={styles.buttonBorder}>
-        <Text style={[ styles.buttonTitle, { color }]}>{title}</Text>
+        <Image
+          {require(url)}/>
       </View>
     </TouchableOpacity>
   )
