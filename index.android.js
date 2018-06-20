@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import TimeTable from './app/containers/TimeTable';
+import test from './app/containers/test';
 
-AppRegistry.registerComponent('BunkIt', () => TimeTable);
+AppRegistry.registerComponent('BunkIt', () => test);
