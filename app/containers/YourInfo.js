@@ -58,44 +58,47 @@ export default class YourInfo extends Component {
               selectedValue={this.state.selected2}
               onValueChange={this.onValueChange2.bind(this)}
             >
-              <Picker.Item label="CIC" value="key0" />
-              <Picker.Item label="KMC" value="key1" />
-              <Picker.Item label="Ramjas" value="key2" />
-              <Picker.Item label="SRCC" value="key3" />
-              <Picker.Item label="Hindu" value="key4" />
+              <Picker.Item label="College name" value="key0" />
+              <Picker.Item label="CIC" value="key1" />
+              <Picker.Item label="KMC" value="key2" />
+              <Picker.Item label="Ramjas" value="key3" />
+              <Picker.Item label="SRCC" value="key4" />
+              <Picker.Item label="Hindu" value="key5" />
             </Picker>
             <View style={{height: 1.5,width: 365,backgroundColor: '#707070',marginLeft: 4}}></View>
             <Picker
               mode="dropdown"
               iosIcon={<Icon name="ios-arrow-down-outline" />}
-              placeholder="College Name"
+              placeholder="Course Name"
               placeholderStyle={{ color: "#bfc6ea" }}
               placeholderIconColor="909090"
               style={{ marginTop:20 }}
               selectedValue={this.state.selected3}
               onValueChange={this.onValueChange3.bind(this)}
             >
-              <Picker.Item label="Btech" value="key0" />
+              <Picker.Item label="Course Name" value="key0" />
               <Picker.Item label="BA" value="key1" />
               <Picker.Item label="MSC" value="key2" />
               <Picker.Item label="BSC" value="key3" />
-              <Picker.Item label="MCom" value="key4" />
+              <Picker.Item label="Btech" value="key4" />
+              <Picker.Item label="Btech" value="key5" />
             </Picker>
             <View style={{height: 1.5,width: 365,backgroundColor: '#707070',marginLeft: 4}}></View>
             <Picker
               mode="dropdown"
               iosIcon={<Icon name="ios-arrow-down-outline" />}
-              placeholder="College Name"
+              placeholder="Year"
               placeholderStyle={{ color: "#bfc6ea" }}
               placeholderIconColor="909090"
               style={{ marginTop:20 }}
               selectedValue={this.state.selected4}
               onValueChange={this.onValueChange4.bind(this)}
             >
-              <Picker.Item label="I" value="key0" />
-              <Picker.Item label="II" value="key1" />
-              <Picker.Item label="III" value="key2" />
-              <Picker.Item label="IV" value="key3" />
+              <Picker.Item label="Year" value="key0" />
+              <Picker.Item label="I" value="key1" />
+              <Picker.Item label="II" value="key2" />
+              <Picker.Item label="III" value="key3" />
+              <Picker.Item label="IV" value="key4" />
             </Picker>
             <View style={{height: 1.5,width: 365,backgroundColor: '#707070',marginLeft: 4}}></View>
           </Form>

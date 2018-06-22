@@ -31,8 +31,17 @@ export default class About extends Component {
       })
   }
 
-  
+
   _GAuth(){
+    GoogleSignin.configure({
+      scopes: ["https://www.googleapis.com/auth/drive.readonly"], // what API you want to access on behalf of the user, default is email and profile
+
+      webClientId: "789334960328-1db9ravgnhj5igajr7q09ksicb58qftg.apps.googleusercontent.com", 
+      
+    })
+    .then(() => {
+      // you can now call currentUserAsync()
+    });
     GoogleSignin.signIn()
     .then((user) => {
       console.log(user);
@@ -42,6 +51,7 @@ export default class About extends Component {
       console.log('WRONG SIGNIN', err);
     })
     .done();
+    
   }
   _signOut() {
     GoogleSignin.revokeAccess()

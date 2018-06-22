@@ -1,67 +1,120 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
+  Platform,
   StyleSheet,
+  Text,
   View,
-  Alert,
-  Text
-} from 'react-native'
+  TouchableOpacity
+} from 'react-native';
 
-export default class About extends Component {
+function ViewRow({ children }) {
+  return (
+    <View style={styles.viewRow}>{children}</View>
+  )
+}
+
+function ViewCol({ children }) {
+  return (
+    <View style={styles.viewCol}>{children}</View>
+  )
+}
+
+
+export default class TimeTable extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-      <View style={{flexDirection:'row',paddingTop: 20,paddingBottom: 20,justifyContent: 'space-between'}}>
-        <Text style={{color:'#7BC46E', fontSize: 20}}>Time Table</Text>
-        <Text style={{color:'#7BC46E', fontSize: 20}}>Home</Text>
-        <Text style={{color:'#7BC46E', fontSize: 20}}>Calender</Text>
-      </View>
-      <Text style={{textAlign:'center',fontSize: 15,paddingBottom: 10}}>Day & Date</Text>
-      <View style={{flexDirection:'row',justifyContent: 'space-between',paddingBottom: 30}}>
-        <View style={styles.cell}/>
-        <View style={styles.cell}/>
-        <View style={styles.cell}/>
-        <View style={styles.cell}/>
-        <View style={styles.cell}/>
-        <View style={styles.cell}/>
-        <View style={styles.cell}/>
-      </View>
-      <Text style={{textAlign:'center',fontSize: 15,paddingBottom: 10,color:'#7BC46E',paddingBottom: 40}}>Staticstics</Text>
+        <Text style={styles.textTime} >Your Time Table</Text>
+        <ViewRow>
+         <ViewCol>
+            <Text style={{color:'#7BC46E'}}>M</Text>
+            <Text style={{color:'#7BC46E'}}>T</Text>
+            <Text style={{color:'#7BC46E'}}>W</Text>
+            <Text style={{color:'#7BC46E'}}>T</Text>
+            <Text style={{color:'#7BC46E'}}>F</Text>
+            <Text style={{color:'#7BC46E'}}>S</Text>
+         </ViewCol>
+         <ViewCol>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+         </ViewCol>
+         <ViewCol>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+         </ViewCol>
+         <ViewCol>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+         </ViewCol>
+         <ViewCol>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+         </ViewCol>
+         
+         <ViewCol>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+         </ViewCol>
+         <ViewCol>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+         </ViewCol>
+         <ViewCol>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+         </ViewCol>
+        </ViewRow>
+        <View>
+          <View style={{flexDirection:'row',alignItems:'center'}}>
+            <View style={styles.roundbutton}>
+             
+            </View>
+            <Text>Dynamics Eduations</Text>
+          </View>
 
-        <View style= {styles.Card}>
-          <Text style= {styles.Text}>Total Classes You Can Bunk
-          </Text>
-          <Text style={{fontSize: 120,textAlign:'center',color:'#f0f0f0'}}>76</Text>
-        </View> 
+        </View>
+        
       </View>
-    )
+    );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-    paddingHorizontal: 20,
+   container: {
+      flex: 1,
+      alignItems: 'center',
+      backgroundColor: '#F5FCFF',
+
   },
-  Card: {
-    width:350, 
-    height: 350,
-    borderRadius: 15,
-    borderColor: '#d6d7da',
-    borderWidth: 1,
-    backgroundColor: '#F47D5D',
-    marginLeft: 13
- },
-  Text:{
-    fontSize: 30,
-    fontWeight:"normal",
-    paddingTop: 30,
-    paddingLeft: 20,
-    paddingRight: 20,
-    textAlign: 'center',
-    color:"#f0f0f0"
-  },
-  cell: {
+   cell: {
       width:40, 
       height: 30, 
       borderRadius: 10,
@@ -76,7 +129,30 @@ const styles = StyleSheet.create({
       paddingLeft: 25,
       paddingRight: 25,
   },
-
-
-})
-                            
+   viewCol: {
+      flexDirection: 'column',
+      alignSelf: 'stretch',
+      justifyContent: 'space-between',
+   },
+   line:{
+    width: 1.5,
+    backgroundColor: '#ff0000',
+    marginRight:3
+  },
+  textTime: {
+    color: '#7BC46E',  
+    fontSize: 40,
+    textAlign: 'right',
+    paddingRight: 20 ,
+    paddingBottom: 70
+  },
+  roundbutton: {
+      width: 30,
+      height: 30,
+      borderRadius: 15,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginRight: '5%',
+      backgroundColor:'#7BC46E'
+  }
+});
