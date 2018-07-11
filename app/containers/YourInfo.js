@@ -46,7 +46,6 @@ export default class YourInfo extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.textInfo}>Your Info</Text>
-        <TextInput style={styles.textinputName}placeholder='Yout Name'/>
           <Form>
             <Picker
               mode="dropdown"

@@ -1,145 +1,111 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
-  Platform,
   StyleSheet,
-  Text,
   View,
-  TouchableOpacity
-} from 'react-native';
+  Alert,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Image
+} from 'react-native'
 
-function ViewRow({ children }) {
+function ButtonsRow({ children }) {
   return (
-    <View style={styles.viewRow}>{children}</View>
+    <View style={styles.buttonsRow}>{children}</View>
   )
 }
 
-function ViewCol({ children }) {
-  return (
-    <View style={styles.viewCol}>{children}</View>
-  )
-}
+export default class About extends Component {
+  
+  FbLogin(){
+    Alert.alert("Fblogin")  
+  }
 
-
-export default class TimeTable extends Component<Props> {
+  GLogin(){
+    Alert.alert("Google Login")
+  }
+  
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.textTime} >Create New</Text>
-        <Text style={{fontSize: 18}}> We are not able to find your time table</Text>
-        <Text style={{fontSize: 18}}> would you like to create new</Text>
+        <Text style={styles.textlogin} >Signup</Text>
+        <TextInput style={styles.textinput}
+        placeholder = 'Name'/>
+        <TextInput style={styles.textinput}
+        placeholder = 'email id'/>
+        <TextInput secureTextEntry={true} style={styles.textinput}
+        placeholder = 'password'/>
+        <TextInput secureTextEntry={true} style={styles.textinput}
+        placeholder = 'Confirm Password'/>
+       
+        
 
-        <View style={{paddingTop: 40}}>
-          <TouchableOpacity
-            style={ styles.button}>
-            <View style={styles.buttonBorder}>
-              <Text style={{color:'#ffffff', fontSize: 170,textAlign: 'center',marginBottom: 15}}>+</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
-        <View style={{paddingTop: 180,paddingLeft: 250}}>
-          <TouchableOpacity
-            style={ styles.exitButton}>
-            <View style={styles.exitButtonBorder}>
-              <Text style={{color:'#ffffff', fontSize: 20,textAlign: 'center',marginBottom: 5}}>Exit</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
         
       </View>
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create({
-   container: {
-      flex: 1,
-      alignItems: 'center',
-      backgroundColor: '#F5FCFF',
-
+ container: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+    paddingTop: 50,
+    paddingHorizontal: 20,
   },
-   cell: {
-      width:40, 
-      height: 30, 
-      borderRadius: 10,
-      borderColor: '#d6d7da',
-      marginBottom: 5,
-      borderWidth: 1,
-   },
-   viewRow: {
-      flexDirection: 'row',
-      alignSelf: 'stretch',
-      justifyContent: 'space-between',
-      paddingLeft: 25,
-      paddingRight: 25,
-  },
-   viewCol: {
-      flexDirection: 'column',
-      alignSelf: 'stretch',
-      justifyContent: 'space-between',
-   },
-   line:{
-    width: 1.5,
-    backgroundColor: '#ff0000',
-    marginRight:3
-  },
-  textTime: {
+  textlogin: {
     color: '#7BC46E',  
-    fontSize: 38,
+    fontSize: 40,
     textAlign: 'right',
     paddingRight: 20 ,
-    paddingBottom: 130,
-    textAlign: 'center'
+    paddingBottom: 150
   },
-  roundbutton: {
-      width: 30,
-      height: 30,
-      borderRadius: 15,
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginRight: '5%',
-      backgroundColor:'#7BC46E'
+  textforgot: {
+    color: '#1F7FEF',
+    fontSize: 14,
+    textAlign:'right',
+    paddingRight: 20,
+    paddingTop: 20,
+    paddingBottom: 40
   },
-  roundbutton1: {
-      width: 30,
-      height: 30,
-      borderRadius: 15,
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginRight: '5%',
-      backgroundColor:'#F15B6C'
+  textinput:{
+    height: 40, 
+    marginBottom: 20
+  },
+  contin:{
+    flexDirection:'row',
+    paddingRight: 30,
+    paddingLeft: 30,
+    alignItems:'center'
+  },
+  line:{
+    height: 1.5,
+    width: 100,
+    backgroundColor: '#707070',
+    marginRight:3
+  },
+  buttonsRow: {
+    flexDirection: 'row',
+    alignSelf: 'stretch',
+    justifyContent: 'space-between',
+    marginTop: 80,
+    marginBottom: 30,
+    paddingLeft: 80,
+    paddingRight: 80,
   },
   button: {
-    width: 180,
-    height: 180,
-    borderRadius: 90,
-    justifyContent: 'center',
-    alignItems: 'center',
+      width: 80,
+      height: 80,
+      borderRadius: 40,
+      justifyContent: 'center',
+      alignItems: 'center',
   },
   buttonBorder: {
-    width: 176,
-    height: 176,
-    borderRadius: 88,
-    borderWidth: 1,
-    borderColor: '#68CDF1',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor:'#68CDF1'
+      width: 76,
+      height: 76,
+      borderRadius: 38,
+      borderWidth: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
   },
-  exitButton: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  exitButtonBorder: {
-    width: 76,
-    height: 76,
-    borderRadius: 38,
-    borderWidth: 1,
-    borderColor: '#F47D5D',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor:'#F05656'
-  },
-});
+})
