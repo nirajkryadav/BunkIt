@@ -18,22 +18,27 @@ function ButtonsRow({ children }) {
 export default class About extends Component {
   
 	FbLogin(){
-		Alert.alert("Fblogin")  
+		Alert.alert("Well it seems we are also Bunking our classes")  
 	}
 
 	GLogin(){
-		Alert.alert("Google Login")
+		Alert.alert("Well it seems we are also Bunking our classes")
 	}
   
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.textlogin} >Log in</Text>
-        <TextInput style={styles.textinputEm}
+        <TextInput style={styles.textinput}
         placeholder = 'email id'/>
-        <TextInput style={styles.textinputPass}
+        <TextInput style={styles.textinput}
         placeholder = 'password'/>
         <Text style={styles.textforgot}>Forgot Password?</Text>
+        <TouchableOpacity
+            onPress={ () => console.log('pressed') }
+            style={ styles.button_Up}>
+          <Text style={{fontSize: 20,textAlign: 'center',marginTop: 4,color: '#ffffff' }}>Lets Bunk</Text>
+        </TouchableOpacity>
         <View style={styles.contin}>
           <View style={styles.line}/>
           <Text style={{color:'#F15B6C',paddingVertical: 10}}>or continue with </Text>
@@ -73,7 +78,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     textAlign: 'right',
     paddingRight: 20 ,
-    paddingBottom: 150
+    paddingBottom: 130
   },
   textforgot: {
     color: '#1F7FEF',
@@ -81,13 +86,19 @@ const styles = StyleSheet.create({
     textAlign:'right',
     paddingRight: 20,
     paddingTop: 20,
-    paddingBottom: 40
+    paddingBottom: 10
   },
-  textinputEm:{
+  textinput:{
     height: 40, 
+ 
   },
-  textinputPass:{
-    height: 40, 
+  button_Up:{
+    backgroundColor: '#7BC46E',
+    height: 40,
+    borderRadius: 20,
+    marginTop: 20,
+    marginBottom: 30
+
   },
   contin:{
     flexDirection:'row',
@@ -99,7 +110,8 @@ const styles = StyleSheet.create({
     height: 1.5,
     width: 100,
     backgroundColor: '#707070',
-    marginRight:3
+    marginRight:3,
+    marginTop: 4
   },
   buttonsRow: {
     flexDirection: 'row',
