@@ -1,84 +1,97 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
+  Platform,
   StyleSheet,
-  View,
-  Alert,
   Text,
-  TextInput,
-  TouchableOpacity,
-  Image
-} from 'react-native'
+  View,
+  TouchableOpacity
+} from 'react-native';
 
-function ButtonsRow({ children }) {
-  return (
-    <View style={styles.buttonsRow}>{children}</View>
-  )
-}
-
-export default class About extends Component {
-  
-  FbLogin(){
-    Alert.alert("Fblogin")  
-  }
-
-  GLogin(){
-    Alert.alert("Google Login")
-  }
-  
+type Props = {};
+export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.textlogin} >Signup</Text>
-        <TextInput style={styles.textinput}
-        placeholder = 'Name'/>
-        <TextInput style={styles.textinput}
-        placeholder = 'email id'/>
-        <TextInput secureTextEntry={true} style={styles.textinput}
-        placeholder = 'password'/>
-        <TextInput secureTextEntry={true} style={styles.textinput}
-        placeholder = 'Confirm Password'/>
-       <TouchableOpacity
-            onPress={ () => console.log('pressed') }
-            style={ styles.button_Up}>
-          <Text style={{fontSize: 20,textAlign: 'center',marginTop: 4,color: '#ffffff' }}>SignUp</Text>
+        <View style={styles.cell}/>
+        <View style={styles.cell}/>
+        <View style={styles.cell}/>
+        <TouchableOpacity >
+          <View style={{flexDirection:'row',alignItems:'center'}}>
+            <View style={[styles.roundbutton, {backgroundColor:'#7BC46E',marginTop: 20}]}> 
+            </View>
+            <Text style={{alignItems: 'center' }}>Dynamics Eduations</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={{flexDirection:'row',alignItems:'center',marginTop: 20}}>
+            <View style={[styles.roundbutton, {backgroundColor:'#0076FF'}]}> 
+            </View>
+            <Text>Linear Algebra</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={{flexDirection:'row',alignItems:'center',marginTop: 20}}>
+            <View style={[styles.roundbutton, {backgroundColor:'#0076FF'}]}> 
+            </View>
+            <Text>Linear Algebra</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={{flexDirection:'row',alignItems:'center',marginTop: 20}}>
+            <View style={[styles.roundbutton, {backgroundColor:'#0076FF'}]}> 
+            </View>
+            <Text>Linear Algebra</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={{flexDirection:'row',alignItems:'center',marginTop: 20}}>
+            <View style={[styles.roundbutton, {backgroundColor:'#0076FF'}]}> 
+            </View>
+            <Text>Linear Algebra</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={{flexDirection:'row',alignItems:'center',marginTop: 20}}>
+            <View style={[styles.roundbutton, {backgroundColor:'#0076FF'}]}> 
+            </View>
+            <Text>Linear Algebra</Text>
+          </View>
         </TouchableOpacity>
       </View>
-    )
+    );
   }
 }
 
 const styles = StyleSheet.create({
- container: {
+  container: {
     flex: 1,
-    backgroundColor: '#ffffff',
-    paddingTop: 50,
-    paddingHorizontal: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
   },
-  textlogin: {
-    color: '#7BC46E',  
-    fontSize: 40,
-    textAlign: 'right',
-    paddingRight: 20 ,
-    paddingBottom: 120
+  cell: {
+    width:40, 
+    height: 30, 
+    borderRadius: 10,
+    borderColor: '#d6d7da',
+    marginBottom: 5,
+    borderWidth: 1,
+   },
+   roundbutton: {
+      width: 30,
+      height: 30,
+      borderRadius: 15,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginRight: '5%',
   },
-  textforgot: {
-    color: '#1F7FEF',
-    fontSize: 14,
-    textAlign:'right',
-    paddingRight: 20,
-    paddingTop: 20,
-    paddingBottom: 40
-  },
-  textinput:{
-    height: 40, 
-    marginBottom: 20
-  },
-  button_Up:{
-    backgroundColor: '#7BC46E',
-    height: 40,
-    borderRadius: 20,marginTop: 30
+ button:{
+      marginTop: 0
+ },
+ buttonPress:{
+      borderColor: '#707070',
+      borderWidth: 1,
+      borderRadius: 10,
+ }
 
-  }
-
-  
-})
+});

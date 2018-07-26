@@ -26,22 +26,15 @@ export default class TimeTable extends Component<Props> {
       <View style={styles.container}>
         <Text style={styles.textTime} >Your Time Table</Text>
         <ViewRow>
-         <ViewCol>
-            <Text style={{color:'#7BC46E'}}>M</Text>
-            <Text style={{color:'#7BC46E'}}>T</Text>
-            <Text style={{color:'#7BC46E'}}>W</Text>
-            <Text style={{color:'#7BC46E'}}>T</Text>
-            <Text style={{color:'#7BC46E'}}>F</Text>
-            <Text style={{color:'#7BC46E'}}>S</Text>
+          <ViewCol>
+            <Text style={{color: '#7BC46E'}}>M</Text>
+            <Text style={{color: '#7BC46E'}}>T</Text>
+            <Text style={{color: '#7BC46E'}}>W</Text>
+            <Text style={{color: '#7BC46E'}}>T</Text>
+            <Text style={{color: '#7BC46E'}}>F</Text>
+            <Text style={{color: '#7BC46E'}}>S</Text>
          </ViewCol>
-         <ViewCol>
-            <View style={styles.cell}/>
-            <View style={styles.cell}/>
-            <View style={styles.cell}/>
-            <View style={styles.cell}/>
-            <View style={styles.cell}/>
-            <View style={styles.cell}/>
-         </ViewCol>
+
          <ViewCol>
             <View style={styles.cell}/>
             <View style={styles.cell}/>
@@ -66,7 +59,22 @@ export default class TimeTable extends Component<Props> {
             <View style={styles.cell}/>
             <View style={styles.cell}/>
          </ViewCol>
-         
+         <ViewCol>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+         </ViewCol>
+         <ViewCol>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+            <View style={styles.cell}/>
+         </ViewCol>
          <ViewCol>
             <View style={styles.cell}/>
             <View style={styles.cell}/>
