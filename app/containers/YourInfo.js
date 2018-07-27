@@ -19,6 +19,10 @@ import {
 
 
 export default class YourInfo extends Component {
+  static navigationOptions = {
+    title:'Second screen',
+  }
+
   constructor(props) {
     super(props);
     this.state = {

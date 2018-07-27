@@ -15,29 +15,40 @@ function ButtonsRow({ children }) {
   )
 }
 
-export default class Login extends Component {
-  
-	FbLogin(){
-		Alert.alert("Well it seems we are also Bunking our classes")  
-	}
+export default class Signup extends Component {
+  static navigationOptions = {
+    title:'First screen',
 
-	GLogin(){
-		Alert.alert("Well it seems we are also Bunking our classes")
-	}
+  }
+
+
+  
+  FbLogin(){
+    Alert.alert("Fblogin")  
+  }
+
+  GLogin(){
+    Alert.alert("Google Login")
+  }
   
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.textlogin} >Log in</Text>
+        <Text style={styles.textlogin} >Signup</Text>
+        <TextInput style={styles.textinput}
+        placeholder = 'Name'/>
         <TextInput style={styles.textinput}
         placeholder = 'email id'/>
-        <TextInput style={styles.textinput}
+        <TextInput secureTextEntry={true} style={styles.textinput}
         placeholder = 'password'/>
-        <Text style={styles.textforgot}>Forgot Password?</Text>
-        <TouchableOpacity
-            onPress={ () => console.log('pressed') }
+        <TextInput secureTextEntry={true} style={styles.textinput}
+        placeholder = 'Confirm Password'/>
+       <TouchableOpacity
+            onPress={ 
+              () => this.props.navigation.navigate('Home')
+            }
             style={ styles.button_Up}>
-          <Text style={{fontSize: 20,textAlign: 'center',marginTop: 4,color: '#ffffff' }}>Lets Bunk</Text>
+          <Text style={{fontSize: 20,textAlign: 'center',marginTop: 4,color: '#ffffff' }}>SignUp</Text>
         </TouchableOpacity>
         <View style={styles.contin}>
           <View style={styles.line}/>
@@ -78,7 +89,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     textAlign: 'right',
     paddingRight: 20 ,
-    paddingBottom: 130
+    paddingBottom: 80
   },
   textforgot: {
     color: '#1F7FEF',
@@ -86,11 +97,17 @@ const styles = StyleSheet.create({
     textAlign:'right',
     paddingRight: 20,
     paddingTop: 20,
-    paddingBottom: 10
+    paddingBottom: 40
   },
   textinput:{
     height: 40, 
- 
+    marginBottom: 20
+  },
+  button_Up:{
+    backgroundColor: '#7BC46E',
+    height: 40,
+    borderRadius: 20,marginTop: 30
+
   },
   button_Up:{
     backgroundColor: '#7BC46E',
@@ -117,7 +134,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignSelf: 'stretch',
     justifyContent: 'space-between',
-    marginTop: 80,
+    marginTop: 20,
     marginBottom: 30,
     paddingLeft: 80,
     paddingRight: 80,
@@ -137,4 +154,6 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
   },
+
+  
 })

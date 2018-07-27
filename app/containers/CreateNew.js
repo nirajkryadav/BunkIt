@@ -20,7 +20,7 @@ function ViewCol({ children }) {
 }
 
 
-export default class TimeTable extends Component<Props> {
+export default class CreateNew extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>

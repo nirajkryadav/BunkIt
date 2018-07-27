@@ -15,7 +15,7 @@ function ButtonsRow({ children }) {
   )
 }
 
-export default class About extends Component {
+export default class Signup extends Component {
 
 
   

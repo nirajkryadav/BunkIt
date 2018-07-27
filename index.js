@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import  YourInfo  from './app/containers/YourInfo';
+import  Basic  from './app/containers/Basic';
 
-AppRegistry.registerComponent('BunkIt', () => YourInfo);
+AppRegistry.registerComponent('BunkIt', () => Basic);
